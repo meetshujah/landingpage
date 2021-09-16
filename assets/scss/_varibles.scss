@@ -1,0 +1,19 @@
+$primary-color: #feeab4;
+$secondary-color: #0e1216;
+$accent-color: #fdbb09;
+$black: #000;
+$dark-grey: #292e31;
+$light-grey: #0e1216;
+$white: #fff;
+$smoke-white: #f2f2f2;
+$breakpoints: (
+  "small": (
+    max-width: 767px,
+  ),
+  "medium": (
+    max-width: 992px,
+  ),
+  "large": (
+    max-width: 1200px,
+  ),
+) !default;

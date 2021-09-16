@@ -1,0 +1,576 @@
+@import "_varibles";
+@import "_mixins";
+
+@font-face {
+  font-family: "plus_jakarta_displaybold";
+  src: url("../fonts/plusjakartadisplay-bold-webfont.woff2") format("woff2"),
+    url("../fonts/plusjakartadisplay-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "plus_jakarta_displayregular";
+  src: url("../fonts/plusjakartadisplay-regular-webfont.woff2") format("woff2"),
+    url("../fonts/plusjakartadisplay-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "poppinsbold";
+  src: url("../fonts/poppins-bold-webfont.woff2") format("woff2"),
+    url("../fonts/poppins-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "poppinsregular";
+  src: url("../fonts/poppins-regular-webfont.woff2") format("woff2"),
+    url("../fonts/poppins-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "poppinssemibold";
+  src: url("../fonts/poppins-semibold-webfont.woff2") format("woff2"),
+    url("../fonts/poppins-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "rubikRegular";
+  src: url("../fonts/Rubik-Regular.woff2") format("woff2"),
+    url("../fonts/Rubik-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "rubikBold";
+  src: url("../fonts/Rubik-Bold.woff2") format("woff2"),
+    url("../fonts/Rubik-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "rubikExtraBold";
+  src: url("../fonts/Rubik-ExtraBold.woff2") format("woff2"),
+    url("../fonts/Rubik-ExtraBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "rubikSemibold";
+  src: url("../fonts/Rubik-SemiBold.woff2") format("woff2"),
+    url("../fonts/Rubik-SemiBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "poppinsregular", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+}
+.site-wrapper {
+  h1 {
+    line-height: 1.6;
+    font-weight: 400;
+    font-family: "rubikBold";
+  }
+  h1 {
+    font-size: 68px;
+  }
+  h2 {
+    font-size: 48px;
+    font-family: "rubikBold";
+  }
+  h3 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 20px;
+    margin: 0;
+  }
+  .color-primary {
+    color: $primary-color;
+  }
+  .color-secondary {
+    color: $secondary-color;
+  }
+  .bi {
+    font-size: 20px;
+  }
+  .bg-circle {
+    background-image: url(/assets/images/circle.png);
+    background-position: 66%;
+    background-repeat: no-repeat;
+  }
+  .bg-circle1 {
+    background-image: url(/assets/images/circle1.png);
+    background-position: 97% -176%;
+    background-repeat: no-repeat;
+  }
+  .bg-circle2 {
+    background-image: url(/assets/images/purple.png);
+    background-position: 118% -113px;
+    background-repeat: no-repeat;
+  }
+  .bg-circle3 {
+    background-image: url(/assets/images/green.png);
+    background-position: 120% 213px;
+    background-repeat: no-repeat;
+  }
+  .gradient-border::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(
+      108deg,
+      #9962cb,
+      #fb53ba 41.07%,
+      #ff7f41 92.05%,
+      #ffc845 24.05%
+    );
+  }
+  button {
+    color: $white;
+    font-size: 15px;
+    border: 0px;
+    border-radius: 40px;
+    min-width: 184px;
+    min-height: 50px;
+    padding: 10px 20px;
+  }
+  button.big {
+    min-height: 62px;
+    min-width: 184px;
+  }
+  button.orange {
+    background-color: #fdbb09; /* For browsers that do not support gradients */
+    background-image: linear-gradient(#fdbb09, #fb972f);
+    color: $white;
+    box-shadow: 2px 7px 17px #fb972f;
+  }
+  .iframevideo {
+    height: 600px;
+  }
+  #videoModal .btn-close {
+    background-image: none;
+  }
+  button.green {
+    background-color: #73efc6;
+    background-image: linear-gradient(#73efc6, #06cb8c);
+    color: #044e37;
+    border: solid 1px #06cb8c;
+    background-clip: content-box;
+    padding: 2px;
+    box-shadow: 2px 7px 17px #73efc6;
+  }
+  button.white {
+    background-color: #fff;
+    color: #0e1216;
+  }
+  button.transparent {
+    background-color: transparent;
+    color: #0e1216;
+    border: 1px solid #fb972f;
+  }
+  button.btnfull {
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: $primary-color;
+    color: #fb972f;
+    min-height: 44px;
+  }
+  form {
+    .form-floating > .form-control {
+      background-color: $white;
+      color: $black;
+      font-size: 12px;
+      border-radius: 10px !important;
+      border: 1px solid #fcad18;
+    }
+    .form-floating > label {
+      font-size: 12px;
+      padding-top: 20px;
+    }
+  }
+  ::placeholder {
+    color: $light-grey;
+    font-size: 12px;
+  }
+  .contact {
+    button,
+    img {
+      color: $dark-grey;
+    }
+  }
+  .PricingTable h2 {
+    padding-top: 112px;
+  }
+  .form-container {
+    background-image: linear-gradient(to bottom right, #feda80, #fdcb91);
+    padding: 28px;
+    border-radius: 20px;
+    width: 447px;
+    .btn {
+      background-color: $white;
+      background-clip: content-box;
+      padding: 4px;
+      box-shadow: 2px 7px 17px #fb972f;
+    }
+    textarea {
+      height: 112px;
+    }
+    h2 {
+      font-size: 52px;
+    }
+  }
+  .rounded-section {
+    border-radius: 5rem !important;
+  }
+  .border-orange {
+    border-color: #fa9f25 !important;
+  }
+  .rounded-section-top {
+    border-top-left-radius: 5rem !important;
+    border-top-right-radius: 5rem !important;
+  }
+  .mb-62 {
+    margin-bottom: 62px !important;
+  }
+  .price-container {
+    padding: 28px;
+    min-height: 424px;
+    border-radius: 20px;
+    color: $black;
+    background-color: white;
+    p {
+      font-size: 12px !important;
+      .bi {
+        color: $accent-color;
+      }
+    }
+    &.active {
+      background-image: linear-gradient(to bottom right, #fdb90c, #f9972c);
+      color: $white;
+      .bi {
+        color: $white;
+      }
+      button {
+        background-color: $black;
+        color: $white;
+      }
+    }
+  }
+
+  sup {
+    top: -1.5em;
+  }
+  .AboutSection {
+    img {
+      height: 92px;
+    }
+    P {
+      color: #0e1216;
+    }
+    h4 {
+      font-family: "poppinsbold";
+      height: 56px;
+    }
+  }
+  a {
+    font-weight: bold;
+    color: $white;
+    text-decoration: none;
+    .bi {
+      padding-right: 10px;
+    }
+  }
+  .SocialLinksSection {
+    height: 310px;
+    background-image: url("../images/curve.png");
+    background-size: cover;
+    margin-top: -48px;
+    .nav {
+      padding-top: 7.5rem !important;
+    }
+  }
+  .CallUsSection {
+    height: 523px;
+    padding-top: 62px;
+  }
+  .CopyRightSection {
+    background-color: $black;
+    color: $white;
+  }
+  .CompanySlider img {
+    height: 65px;
+  }
+  .ratting {
+    .card {
+      border-radius: 20px;
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      padding: 2px;
+      width: 393px;
+      height: 225px;
+      &.blue {
+        background-image: linear-gradient(white, white),
+          linear-gradient(to right, #19a3f2, #0f85c8);
+      }
+      &.orange {
+        background-image: linear-gradient(white, white),
+          linear-gradient(to left, #fdbb09, #fb972f);
+      }
+      &.green {
+        background-image: linear-gradient(white, white),
+          linear-gradient(to left, #73efc6, #06cb8c);
+      }
+      &.purple {
+        background-image: linear-gradient(white, white),
+          linear-gradient(to left, #bf70f2, #9213ea);
+      }
+      img {
+        display: inline-block;
+      }
+    }
+  }
+  .person {
+    .detail {
+      color: #86888a;
+    }
+  }
+  .CommentsSection {
+    height: 768px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 65px;
+    border-radius: 20rem;
+  }
+  .VideoSection {
+    .img-fluid {
+      max-width: 100%;
+      height: 242px;
+    }
+    .h-490 {
+      height: 490px;
+    }
+    .middle {
+      transition: 0.5s ease;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    .video {
+      position: relative;
+    }
+    .video:hover .image {
+      opacity: 0.3;
+    }
+
+    .video:hover .middle {
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+  button.btn-close {
+    position: absolute;
+    left: 94%;
+    top: 2px;
+    min-width: auto;
+    min-height: auto;
+  }
+  .modalBg {
+    background-image: url(/assets/images/cartoon.png);
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  #priceform {
+    h4 {
+      color: #fdbb09;
+      opacity: 1;
+    }
+    .price-container {
+      background-color: transparent;
+      p {
+        color: #fdbb09;
+      }
+    }
+    .modal-content {
+      background-color: #161616;
+    }
+  }
+  .modal {
+    .modal-body {
+      overflow-x: hidden;
+    }
+    img {
+      height: 100%;
+    }
+    .modal-content {
+      /* border: 1px solid rgba(0,0,0,.2); */
+      border-radius: 22px;
+    }
+    h2 {
+      font-size: 24px;
+      font-family: "plus_jakarta_displaybold";
+    }
+    h4 {
+      font-family: "plus_jakarta_displaybold";
+      opacity: 0.6;
+      color: #161616;
+    }
+    .form-check {
+      label {
+        font-size: 12px;
+      }
+    }
+    p {
+      color: #8b8b8b;
+      font-size: 12px;
+      font-family: "plus_jakarta_displayregular";
+    }
+    .form-floating > .form-control {
+      border: 1px solid #162f5d;
+      font-family: "poppinsregular";
+    }
+    .input-group {
+      button {
+        background-color: #adb5d9;
+        color: #162f5d;
+        min-width: 85px;
+        border: 1px solid #162f5d;
+        font-family: "poppinsregular";
+        margin-bottom: 0px !important;
+      }
+      .dropdown-menu {
+        a {
+          color: #162f5d;
+          padding: 5px;
+          font-size: 12px;
+          font-weight: normal;
+        }
+      }
+    }
+    .input-group > .form-control,
+    .input-group > .form-select {
+      border: 1px solid #162f5d;
+    }
+  }
+  @media screen and(max-width: 1320px) {
+    .form-container {
+      width: 100% !important;
+    }
+  }
+  @media screen and(max-width: 767px) {
+    h1 {
+      font-size: 30px;
+    }
+    h2 {
+      font-size: 25px;
+    }
+    p {
+      font-size: 12px;
+    }
+    .price-container {
+      margin-bottom: 20px;
+    }
+    .video {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .site-header {
+      button {
+      }
+      .nav-item {
+        margin: 0 !important;
+      }
+    }
+    .SocialLinksSection {
+      height: 700px;
+      background-color: blueviolet;
+      background-image: none;
+      margin-top: -50px;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+
+      .nav-item {
+        margin: 0 !important;
+        width: 100%;
+        text-align: center;
+      }
+      .callUsSection {
+        address div {
+          text-align: center;
+        }
+      }
+    }
+    .AboutSection {
+      margin-bottom: 100px;
+    }
+    .ratting {
+      padding: 10px;
+      .card {
+        width: 100%;
+      }
+    }
+    .CommentsSection {
+      border-radius: 40px !important;
+      padding-bottom: 100px;
+    }
+    .VideoSection {
+      .img-fluid {
+        max-width: 83% !important;
+      }
+      .h-490 {
+        height: 328px;
+        width: 287px;
+      }
+    }
+    .iframevideo {
+      height: 400px;
+    }
+  }
+  @media screen and(min-width: 768px) and (max-width: 1024px) {
+    .price-container {
+      margin-bottom: 20px;
+    }
+    .video {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    button {
+      font-size: 12px;
+    }
+    .SocialLinksSection {
+      height: 516px;
+      background-color: blueviolet;
+      background-image: none;
+      margin-top: -50px;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+
+      .nav-item {
+        margin: 0 !important;
+        width: 100%;
+        text-align: center;
+      }
+      .callUsSection {
+        address div {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
